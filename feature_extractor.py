@@ -70,7 +70,7 @@ def read_features_from_csv(args: argparse.Namespace) -> Tuple[List, np.ndarray]:
 
 
 def get_column_types(header: List[str]) -> np.ndarray:
-    types: np.ndarray = np.zeros((len(header),))
+    types: np.ndarray = np.zeros((len(header),), type=object)
 
     for idx, name in enumerate(header):
         if "cat" in name:
